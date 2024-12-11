@@ -1,6 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, NavLink, Routes, Route } from 'react-router-dom'
+import {
+  BrowserRouter,
+  NavLink,
+  Routes,
+  Route,
+  Navigate
+} from 'react-router-dom'
 
 import Home from './pages/Home'
 import About from './pages/About'
@@ -31,8 +37,8 @@ createRoot(document.getElementById('root')).render(
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/accommodation/:id' element={<Accommodation />} />
-          {/* <Route path='/404' element={<Unfound />} /> */}
-          <Route path='*' element={<Unfound />} />
+          <Route path='/404' element={<Unfound />} />
+          <Route path='*' element={<Navigate to='/404' replace />} />
         </Routes>
       </main>
       <footer>

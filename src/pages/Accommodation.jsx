@@ -1,13 +1,11 @@
-import { useParams } from 'react-router'
+import { useParams, Navigate } from 'react-router-dom'
 import useFetch from '../hooks/useFetch'
-import Unfound from './Unfound'
 
 import Collapse from '../components/Collapse'
 import Slideshow from '../components/Slideshow'
 
 function Accommodation() {
   const { id } = useParams()
-
   const { data, isPending, error } = useFetch('/logements.json')
 
   function ratingStars(stars) {
@@ -34,7 +32,7 @@ function Accommodation() {
     const accommodationData = data.find((acc) => acc.id.includes(id))
 
     if (!accommodationData) {
-      return <Unfound />
+      return <Navigate to='/404' />
     } else {
       return (
         <article className='accommodation'>
