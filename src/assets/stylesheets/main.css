@@ -140,6 +140,12 @@ h2 {
   color: white;
   text-shadow: 0 0 2px black;
 }
+.slideshow .slide {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
 .slideshow .previous {
   position: absolute;
   top: 50%;
@@ -154,11 +160,17 @@ h2 {
   transform: translate(0, -50%);
   cursor: pointer;
 }
-.slideshow .slide {
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
+.slideshow .selector {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.slideshow .selector span {
+  cursor: pointer;
+}
+.slideshow .selector span.current {
+  color: #ff6060;
 }
 
 .taglist {

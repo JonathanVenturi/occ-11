@@ -13,18 +13,39 @@ function Slideshow({ slides }) {
   function nextSlide() {
     setIndex(pictureIndex === slides.length - 1 ? 0 : pictureIndex + 1)
   }
+  function goToSlide(index) {
+    setIndex(index)
+  }
 
-  return (
-    <div className='slideshow'>
-      <div onClick={previousSlide} className='previous'>
-        &#9204;
+  if (slides.length < 2) {
+    return (
+      <div className='slideshow'>
+        <div className='slide' style={slideStyle}></div>
       </div>
-      <div className='slide' style={slideStyle}></div>
-      <div onClick={nextSlide} className='next'>
-        &#9205;
+    )
+  } else {
+    return (
+      <div className='slideshow'>
+        <div onClick={previousSlide} className='previous'>
+          &#9204;
+        </div>
+        <div className='slide' style={slideStyle}></div>
+        <div onClick={nextSlide} className='next'>
+          &#9205;
+        </div>
+        <div className='selector'>
+          {slides.map((slide, slideIndex) => (
+            <span
+              key={slideIndex}
+              onClick={() => goToSlide(slideIndex)}
+              className={slideIndex == pictureIndex ? 'current' : ''}>
+              &#8226;
+            </span>
+          ))}
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 Slideshow.propTypes = {
