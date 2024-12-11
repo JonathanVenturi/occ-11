@@ -1,0 +1,14 @@
+.rating {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  font-size: 2rem;
+
+  .redstar {
+    color: $primary-color;
+  }
+
+  .greystar {
+    color: $grey;
+  }
+}

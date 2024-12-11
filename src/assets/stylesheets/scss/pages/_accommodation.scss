@@ -1,0 +1,57 @@
+.accommodation {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .infos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .accommodationinfo {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .secondaryinfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hostinfo {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.125rem;
+      color: #ff6060;
+
+      span {
+        display: inline-block;
+        max-width: min-content;
+        text-align: end;
+      }
+
+      img {
+        height: 64px;
+        width: 64px;
+        border-radius: 32px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .details {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+
+    > * {
+      flex: 1 1 0;
+    }
+  }
+}

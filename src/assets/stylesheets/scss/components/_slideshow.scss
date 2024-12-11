@@ -1,0 +1,35 @@
+.slideshow {
+  position: relative;
+  max-width: 1240px;
+  height: 415px;
+  width: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 0 2px black;
+
+  .previous {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+  }
+
+  .next {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+  }
+
+  .slide {
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,50 @@
+.collapse {
+  border-radius: 5px;
+  overflow: hidden;
+
+  h2 {
+    position: relative;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #ff6060;
+    cursor: pointer;
+  }
+
+  h2::after {
+    position: absolute;
+    right: 20px;
+    content: '\002B9D';
+    transition: 250ms;
+  }
+
+  .collapsible {
+    background-color: #f6f6f6;
+
+    overflow: hidden;
+    display: grid;
+    opacity: 0;
+    padding: 0;
+    grid-template-rows: 0fr;
+    transition:
+      opacity 50ms,
+      padding 100ms,
+      grid-template-rows 250ms;
+  }
+
+  .collapsible * {
+    min-height: 0;
+  }
+}
+
+.collapse.open {
+  h2::after {
+    rotate: -180deg;
+  }
+
+  .collapsible {
+    opacity: 100%;
+    padding: 20px;
+    grid-template-rows: 1fr;
+  }
+}
