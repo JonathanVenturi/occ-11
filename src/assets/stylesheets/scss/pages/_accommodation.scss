@@ -9,6 +9,11 @@
     flex-direction: row;
     justify-content: space-between;
 
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
     .accommodationinfo {
       display: flex;
       flex-direction: column;
@@ -19,12 +24,16 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: flex-end;
+
+      @include breakpoint(tablet) {
+        flex-direction: row-reverse;
+      }
     }
 
     .hostinfo {
       display: flex;
       flex-direction: row;
-      justify-content: flex-end;
       align-items: center;
       gap: 10px;
       font-size: 1.125rem;
@@ -52,6 +61,14 @@
 
     > * {
       flex: 1 1 0;
+    }
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+
+      > * {
+        flex-basis: auto;
+      }
     }
   }
 }

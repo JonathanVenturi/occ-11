@@ -1,22 +1,36 @@
 header {
-  max-width: 1240px;
+  @include fullwidth;
+  padding-top: 40px;
   display: flex;
   flex: 0 0 auto;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
 
   nav {
     display: flex;
     gap: 50px;
-
     a {
       font-weight: bold;
     }
-
     .active {
       text-decoration: underline;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    img {
+      height: 50px;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    padding-top: 20px;
+    nav {
+      gap: 30px;
+      a {
+        text-transform: uppercase;
+      }
     }
   }
 }

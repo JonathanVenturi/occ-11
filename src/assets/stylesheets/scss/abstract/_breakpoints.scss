@@ -1,0 +1,29 @@
+$highBreakpoint: 1024px;
+$midBreakpoint: 768px;
+$lowBreakpoint: 600px;
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: $highBreakpoint) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (max-width: $highBreakpoint) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (max-width: $lowBreakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin fullwidth {
+  width: 100%;
+  max-width: 1320px;
+  padding: 0 40px;
+
+  @include breakpoint(mobile) {
+    padding: 0 20px;
+  }
+}

@@ -1,7 +1,11 @@
 main {
+  @include fullwidth;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  gap: 50px;
-  max-width: 1240px;
+  gap: 40px;
+
+  @include breakpoint(mobile) {
+    gap: 20px;
+  }
 }

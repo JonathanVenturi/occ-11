@@ -5,4 +5,17 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 55px;
   padding: 55px;
+
+  @include breakpoint(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 30px;
+  }
+
+  @include breakpoint(mobile) {
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
 }

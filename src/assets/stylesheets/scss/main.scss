@@ -1,5 +1,6 @@
 @charset 'utf-8';
 
+@import 'abstract/breakpoints';
 @import 'abstract/colors';
 
 @import 'base/reset';
@@ -17,5 +18,6 @@
 @import 'layout/main';
 @import 'layout/listing';
 @import 'layout/footer';
+@import 'layout/error';
 
 @import 'pages/accommodation';
