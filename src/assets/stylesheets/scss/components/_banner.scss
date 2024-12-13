@@ -11,6 +11,7 @@
   background-position: center;
   background-size: cover;
   background-blend-mode: multiply;
+
   p {
     text-wrap: balance;
     color: white;
@@ -21,6 +22,7 @@
   @include breakpoint(mobile) {
     height: 110px;
     padding: 20px;
+    justify-content: flex-start;
     p {
       font-size: 1.125rem;
     }

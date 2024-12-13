@@ -7,14 +7,29 @@
   font-style: normal;
 }
 
+p,
+span,
+li {
+  font-size: 1.125rem;
+  @include breakpoint(mobile) {
+    font-size: 0.75rem;
+  }
+}
+
 h1 {
   color: $primary-color;
   font-weight: bold;
   font-size: 2.25rem;
+  @include breakpoint(mobile) {
+    font-size: 1.125rem;
+  }
 }
 
 h2 {
   color: black;
   font-weight: bold;
   font-size: 1.125rem;
+  @include breakpoint(mobile) {
+    font-size: 0.813rem;
+  }
 }

@@ -38,16 +38,39 @@ select {
   font-style: normal;
 }
 
+p,
+span,
+li {
+  font-size: 1.125rem;
+}
+@media (max-width: 600px) {
+  p,
+  span,
+  li {
+    font-size: 0.75rem;
+  }
+}
+
 h1 {
   color: #ff6060;
   font-weight: bold;
   font-size: 2.25rem;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.125rem;
+  }
 }
 
 h2 {
   color: black;
   font-weight: bold;
   font-size: 1.125rem;
+}
+@media (max-width: 600px) {
+  h2 {
+    font-size: 0.813rem;
+  }
 }
 
 .banner {
@@ -75,6 +98,7 @@ h2 {
   .banner {
     height: 110px;
     padding: 20px;
+    justify-content: flex-start;
   }
   .banner p {
     font-size: 1.125rem;
@@ -83,23 +107,26 @@ h2 {
 
 .card {
   background-blend-mode: multiply;
-  background-size: cover;
+  background-size: cover !important;
   width: 100%;
   height: 100%;
   aspect-ratio: 1;
   border-radius: 10px;
   align-items: flex-end;
   padding: 20px;
-  font-weight: bold;
   display: flex;
-  color: white;
-  text-shadow: 0 0 3px black;
-  font-size: 1.125rem;
 }
 @media (max-width: 600px) {
   .card {
     aspect-ratio: 2;
   }
+}
+.card span {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-wrap: balance;
+  text-shadow: 0 0 3px black;
 }
 
 .collapse {
@@ -199,19 +226,32 @@ h2 {
 }
 .taglist li {
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   height: 25px;
-  padding: 0 10px;
+  padding: 0 20px;
   border-radius: 10px;
   background-color: #ff6060;
   align-content: center;
+}
+@media (max-width: 600px) {
+  .taglist li {
+    height: 18px;
+    font-size: 0.625rem;
+  }
 }
 
 .rating {
   display: flex;
   flex-direction: row;
   gap: 5px;
+}
+.rating span {
   font-size: 2rem;
+}
+@media (max-width: 600px) {
+  .rating span {
+    font-size: 1rem;
+  }
 }
 .rating .redstar {
   color: #ff6060;
@@ -259,24 +299,24 @@ header nav {
   gap: 50px;
 }
 header nav a {
+  font-size: 1.5rem;
   font-weight: bold;
 }
 header nav .active {
   text-decoration: underline;
 }
-@media (max-width: 1024px) {
-  header img {
-    height: 50px;
-  }
-}
 @media (max-width: 600px) {
   header {
     padding-top: 20px;
+  }
+  header img {
+    height: 50px;
   }
   header nav {
     gap: 30px;
   }
   header nav a {
+    font-size: 0.75rem;
     text-transform: uppercase;
   }
 }
@@ -373,7 +413,7 @@ footer {
 @media (max-width: 1024px) {
   .accommodation .infos {
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
   }
 }
 .accommodation .infos .accommodationinfo {
@@ -389,6 +429,7 @@ footer {
 }
 @media (max-width: 1024px) {
   .accommodation .infos .secondaryinfo {
+    align-items: center;
     flex-direction: row-reverse;
   }
 }
@@ -411,6 +452,13 @@ footer {
   width: 64px;
   border-radius: 32px;
   overflow: hidden;
+}
+@media (max-width: 600px) {
+  .accommodation .infos .hostinfo img {
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+  }
 }
 .accommodation .details {
   display: flex;

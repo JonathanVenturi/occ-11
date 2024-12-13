@@ -6,11 +6,16 @@
 
   li {
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     height: 25px;
-    padding: 0 10px;
+    padding: 0 20px;
     border-radius: 10px;
     background-color: #ff6060;
     align-content: center;
+
+    @include breakpoint(mobile) {
+      height: 18px;
+      font-size: 0.625rem;
+    }
   }
 }
