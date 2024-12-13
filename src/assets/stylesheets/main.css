@@ -155,7 +155,7 @@ h2 {
   opacity: 0;
   padding: 0;
   grid-template-rows: 0fr;
-  transition: opacity 50ms, padding 100ms, grid-template-rows 250ms;
+  transition: 250ms;
 }
 .collapse .collapsible * {
   min-height: 0;
