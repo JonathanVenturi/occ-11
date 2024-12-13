@@ -206,15 +206,16 @@ h2 {
   cursor: pointer;
 }
 .slideshow .selector {
+  display: flex;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
 }
-.slideshow .selector span {
+.slideshow .selector div {
   cursor: pointer;
 }
-.slideshow .selector span.current {
+.slideshow .selector div.current {
   color: #ff6060;
 }
 

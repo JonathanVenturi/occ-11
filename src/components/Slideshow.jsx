@@ -35,12 +35,12 @@ function Slideshow({ slides }) {
         </div>
         <div className='selector'>
           {slides.map((slide, slideIndex) => (
-            <span
+            <div
               key={slideIndex}
               onClick={() => goToSlide(slideIndex)}
               className={slideIndex == pictureIndex ? 'current' : ''}>
               &#8226;
-            </span>
+            </div>
           ))}
         </div>
       </div>

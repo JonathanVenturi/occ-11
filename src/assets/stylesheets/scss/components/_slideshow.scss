@@ -37,16 +37,17 @@
   }
 
   .selector {
+    display: flex;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
 
-    span {
+    div {
       cursor: pointer;
     }
 
-    span.current {
+    div.current {
       color: $primary-color;
     }
   }
