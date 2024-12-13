@@ -130,13 +130,13 @@ h2 {
 }
 
 .collapse {
-  border-radius: 5px;
   overflow: hidden;
 }
 .collapse h2 {
   position: relative;
   font-weight: bold;
   padding: 10px 20px;
+  border-radius: 5px;
   color: #ffffff;
   background-color: #ff6060;
   cursor: pointer;
@@ -149,6 +149,7 @@ h2 {
 }
 .collapse .collapsible {
   background-color: #f6f6f6;
+  border-radius: 0 0 5px 5px;
   overflow: hidden;
   display: grid;
   opacity: 0;
@@ -160,6 +161,9 @@ h2 {
   min-height: 0;
 }
 
+.collapse.open h2 {
+  border-radius: 5px 5px 0 0;
+}
 .collapse.open h2::after {
   rotate: -180deg;
 }
